@@ -1,1 +1,1 @@
-dynamic templating with flask - sample solution shared for learning purposes
+dynamic templating with flask - sample solution shared for learning purposes only.
