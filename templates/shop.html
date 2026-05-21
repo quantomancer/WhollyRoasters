@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block container %}
+ <h2>
+ These items are in your shopping cart:
+ </h2>
+ <ul>
+ {% for item in cart %}
+ <li>{{item}}</li>
+ {% endfor %}
+ </ul>
+{% endblock %}

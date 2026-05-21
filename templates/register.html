@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block container %}
+
+    <form action="/register" method="post">
+        {{ form.hidden_tag() }}
+
+        <label for="username">Username:</label>
+        {{ form.username(id="username", placeholder="username") }}
+        <br><br>
+
+        <label for="pwd">Password:</label>
+        {{ form.pwd(id="pwd", placeholder="password") }}
+        <br><br>
+
+        <label for="pwd_confirm">Confirm Password:</label>
+        {{ form.pwd_confirm(id="pwd_confirm", placeholder="confirm password") }}
+        <br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    {% if form.errors %}
+        <ul>
+            {% for field, errors in form.errors.items() %}
+                {% for error in errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if message %}
+        <h3>{{ message }}</h3>
+    {% endif %}
+
+{% endblock %}

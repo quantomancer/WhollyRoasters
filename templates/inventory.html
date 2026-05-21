@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block container %}
+    <h1>Inventory</h1>
+
+    <p>{{ beans|length }} types of beans left!</p>
+
+    <ul>
+        {% for bean in beans %}
+                <li>{{ bean }}</li>
+         {% endfor       %}
+
+
+    </ul>
+ {% endblock %}
