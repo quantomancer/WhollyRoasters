@@ -3,6 +3,7 @@ dynamic templating with flask - sample solution shared for learning purposes onl
 deployment template:
 
 git clone https://github.com/quantomancer/WhollyRoasters.git
+
 cd WhollyRoasters
 python3 -m venv .venv
 source .venv/bin/activate
